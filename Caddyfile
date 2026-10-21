@@ -1,6 +1,7 @@
-:8080 {
+call.fulongzy.com {
     # 将流量轮流反向代理给 8081 和 8082 端口
-    reverse_proxy localhost:8081 localhost:8082 {
+    reverse_proxy localhost:3000 {
         lb_policy round_robin  # 轮询负载均衡算法（默认策略）
+	encode gzip zstd
     }
 }
