@@ -5,7 +5,7 @@ module.exports = {
       script: './app.js',
       instances: 4,                  // 4 核机器开 4 个进程跑满集群负载均衡
       exec_mode: 'cluster',
-      max_memory_restart: '1.5G',
+      max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
         PORT: 3000                   // 你的 Express API 监听 3000 端口
